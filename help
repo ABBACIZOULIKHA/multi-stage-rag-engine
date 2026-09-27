@@ -1,0 +1,20 @@
+From C:\Users\DELL\Documents\RAG_Project:
+1. Start Qdrant (Docker Desktop must be running first)
+docker compose up -d
+2. Create venv + install deps (one-time; ~5 GB, takes a few minutes)
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+3. Configure keys (one-time)
+Copy-Item .env.example .env
+Then edit .env and set:
+- NVIDIA_API_KEY= → key from https://build.nvidia.com/settings
+- LLAMA_CLOUD_API_KEY= → key from https://cloud.llamaindex.ai
+4. Put PDFs in data/
+5. Ingest
+python ingest.py --reset
+First run downloads BAAI/bge-m3 (~2.5 GB), then parses your PDFs and indexes them.
+6. Query
+python query.py "What is ...?"
+or run python query.py for interactive mode.
+Verify Qdrant is up anytime with docker ps; if it's not, start Docker Desktop first.
