@@ -92,7 +92,56 @@ or run interactively:
 python query.py
 ```
 
-Each answer prints its retrieved sources with rerank scores, file name, page, and a preview.
+Each answer prints its retrieved sources with rerank scores, file name, section, and a preview.
+
+## Metadata filtering
+
+Filters are applied as a Qdrant `Filter` **before** retrieval, so they apply to the dense
+*and* the sparse leg, not after fusion. Both legs are filtered, then fused, then reranked.
+
+```powershell
+python query.py --file spec.pdf "What is the retry policy?"
+python query.py --filter "header_path~=/Setup" "How do I configure the device?"
+python query.py --file a.pdf --filter "page>3" "What changed in 2024?"
+```
+
+| Flag | Meaning |
+|------|---------|
+| `--file NAME` | Shorthand for `file_name=NAME`. Repeatable. |
+| `--filter EXPR` | Any payload field. Repeatable. Multiple filters are combined with **AND**. |
+| `--no-default-filters` | Ignore `DEFAULT_FILTERS` from `.env` for this run. |
+
+Expression syntax:
+
+| Operator | Meaning |
+|----------|---------|
+| `key=value` | exact match |
+| `key!=value` | not equal |
+| `key~=value` | full-text contains |
+| `key>value` `key>=` `key<` `key<=` | numeric range (value cast to float) |
+
+Filterable fields are whatever ends up in the node payload. With the default pipeline that is:
+
+| Field | Example value | Notes |
+|-------|---------------|-------|
+| `file_name` | `spec.pdf` | set from the PDF filename at ingest |
+| `header_path` | `/Setup/Config/` | only with `CHUNKER=markdown`; note the leading **and trailing** `/` |
+| `document_id` | `doc-abc123` | LlamaIndex-assigned |
+
+`header_path` carries surrounding slashes, so match it exactly — `--filter "header_path=/Setup/"`
+— or use `~=` to match on the text alone: `--filter "header_path~=/Setup"`.
+
+Add fields to `FILTERED_FIELDS` in `.env` to get a Qdrant payload index for them. Indexes are
+created on startup and are safe to add to an existing collection; filters still work without
+them, but Qdrant falls back to scanning the collection.
+
+Set persistent filters in `.env`:
+
+```
+DEFAULT_FILTERS=file_name=spec.pdf;header_path~=/Setup
+```
+
+Entries are `;`-separated and AND-ed together.
 
 ## Configuration (`.env`)
 
@@ -117,6 +166,8 @@ Each answer prints its retrieved sources with rerank scores, file name, page, an
 | `SPARSE_MODEL`      | Sparse (lexical) leg run through `fastembed`             | `Qdrant/bm25` |
 | `HYBRID_ALPHA`      | Fusion weight, `0` = pure BM25, `1` = pure dense         | `0.5` |
 | `SPARSE_TOP_K`      | Candidates pulled from the sparse leg (defaults to `TOP_K`) | `20` |
+| `FILTERED_FIELDS`   | Payload fields to index for metadata filtering            | `file_name,header_path,document_id` |
+| `DEFAULT_FILTERS`   | Filters applied to every query (`;`-separated, AND-ed)   | – |
 
 ### How the two legs are fused
 
