@@ -1,0 +1,869 @@
+[
+  {
+    "user_input": "Why do the guidelines rely on national prevalence data instead of individual resistance testing?",
+    "reference": "Because HIVDR testing is costly and largely unavailable in low- and middle-income countries, so nationally representative data on pretreatment NNRTI resistance are used to decide whether to transition to a non-NNRTI first-line regimen.",
+    "reference_contexts": [
+      "Since HIVDR testing is costly and largely unavailable in low- and middle-income countries, the group decided that nationally representative data on the frequency of pretreatment HIVDR to NNRTIs could be used to guide whether countries should transition to a non-NNRTI-containing first-line ART regimen"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "pdr2017"
+      ],
+      "id": "q001"
+    }
+  },
+  {
+    "user_input": "What proportion of infants born to HIV-positive mothers received ARV prophylaxis in The Gambia in 2021?",
+    "reference": "288 infants were born to HIV-positive mothers and 90% (259) received ARV prophylaxis.",
+    "reference_contexts": [
+      "During the period under review, 288 infants were born to HIV positive mothers out of which 90% (259) received ARV prophylaxis."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q002"
+    }
+  },
+  {
+    "user_input": "Which indicators are used as early warning indicators of HIV drug resistance?",
+    "reference": "HIV viral load testing coverage, viral load suppression, retention on ART, ARV drug stock-outs and adherence to ART.",
+    "reference_contexts": [
+      "These indicators include: HIV viral load testing coverage, viral load suppression, retention on ART, ARV drug stock-outs and adherence to ART (7,32)."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q003"
+    }
+  },
+  {
+    "user_input": "What strength and certainty of evidence apply to the recommendation on non-NNRTI regimens for people with pretreatment NNRTI resistance?",
+    "reference": "It is a conditional recommendation with low certainty of the evidence.",
+    "reference_contexts": [
+      "a non-NNRTI-containing regimen may be preferable (conditional recommendation, low certainty of the evidence)."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "pdr2017"
+      ],
+      "id": "q004"
+    }
+  },
+  {
+    "user_input": "The 2017 guidelines set a 10% NNRTI-resistance threshold for action. What does the 2021 report show against that threshold?",
+    "reference": "In 21 of 30 reported surveys, pretreatment NVP/EFV resistance exceeded 10%, so many countries are above the 2017 trigger; the 2021 report stresses fast-tracking the transition to DTG-based first-line regimens.",
+    "reference_contexts": [
+      "Countries in which the prevalence of pretreatment HIVDR to NNRTIs among people initiating first-line ART, regardless of previous ARV drug exposure, is ≥10% should urgently consider an alternative first-line ART regimen that does not contain NNRTIs",
+      "In 21 of 30 surveys reported, pretreatment drug resistance to NVP or EFV in populations initiating first-line ART exceeded 10%.",
+      "The high levels of observed pretreatment drug resistance to NVP or EFV emphasize the need to fast-track the transition to the integrase strand-transfer inhibitor dolutegravir (DTG)-based first-line regimens"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-document",
+      "sources": [
+        "hivdr2021",
+        "pdr2017"
+      ],
+      "id": "q005"
+    }
+  },
+  {
+    "user_input": "When is HIV drug resistance most likely to occur among PrEP users?",
+    "reference": "When PrEP is started in the setting of undiagnosed acute HIV infection, so all reasonable steps should be taken to exclude acute HIV infection before initiating or reinitiating PrEP.",
+    "reference_contexts": [
+      "Resistance is most likely to occur when PrEP is started in the setting of undiagnosed acute HIV infection. Taking all reasonable steps to exclude acute HIV infection before initiating or reinitiating PrEP is therefore imperative."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q006"
+    }
+  },
+  {
+    "user_input": "Why does WHO not recommend RTS,S for children aged 6–12 weeks?",
+    "reference": "Because the Phase 3 efficacy data showed vaccine efficacy to be low in that younger age category.",
+    "reference_contexts": [
+      "Based on the efficacy data from the Phase 3 trial, WHO does not recommend the use of the RTS,S vaccine in the younger (6–12 weeks) age category, as the vaccine efficacy was found to be low in this age category."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q007"
+    }
+  },
+  {
+    "user_input": "Which malaria control interventions does The Gambia's 2021 service statistics report highlight?",
+    "reference": "Mass and routine distribution of LLINs, seasonal malaria chemoprevention (SMC) and indoor residual spraying (IRS) in high-endemic districts, plus mandatory laboratory confirmation before treatment, ACTs for uncomplicated malaria and scale-up of community-based treatment.",
+    "reference_contexts": [
+      "Important efforts continue to be invested in malaria control and prevention, including the vector control interventions focused on mass and routine distribution of Long-Lasting Insecticide Nets (LLINs), the seasonal malaria chemoprevention (SMC) and the Indoor Residual Spraying (IRS) in high endemic districts."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q008"
+    }
+  },
+  {
+    "user_input": "What reductions in malaria incidence and mortality did the WHO African Region achieve between 2000 and 2015, and what drove them?",
+    "reference": "Malaria incidence declined by 42% and the mortality rate by 66% between 2000 and 2015. The progress resulted from the expanded use of cost-effective prevention and case management services.",
+    "reference_contexts": [
+      "Malaria incidence and mortality rates declined by 42% and 66% respectively, between 2000 and 2015."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q009"
+    }
+  },
+  {
+    "user_input": "How did malaria admissions per 10,000 population change from 2020 to 2021 in The Gambia?",
+    "reference": "There was a slight reduction, from 9.5 per 10,000 in 2020 to 8.4 per 10,000 in 2021.",
+    "reference_contexts": [
+      "The data shows a slight reduction in malaria admission in 2021 compared to 2020 from 9.5 per 10,000 to 8.4 per 10,000."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q010"
+    }
+  },
+  {
+    "user_input": "Which six countries in the African Region could eliminate local malaria transmission by 2020?",
+    "reference": "Algeria, Botswana, Cabo Verde, Comoros, South Africa and Swaziland.",
+    "reference_contexts": [
+      "Algeria, Botswana, Cabo Verde, Comoros, South Africa, Swaziland"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q011"
+    }
+  },
+  {
+    "user_input": "At what prevalence of pretreatment NNRTI resistance should countries urgently consider a non-NNRTI first-line ART regimen?",
+    "reference": "When the prevalence of pretreatment HIVDR to NNRTIs among people initiating first-line ART, regardless of previous ARV drug exposure, is 10% or higher.",
+    "reference_contexts": [
+      "Countries in which the prevalence of pretreatment HIVDR to NNRTIs among people initiating first-line ART, regardless of previous ARV drug exposure, is ≥10% should urgently consider an alternative first-line ART regimen that does not contain NNRTIs"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "pdr2017"
+      ],
+      "id": "q012"
+    }
+  },
+  {
+    "user_input": "What did surveys find about pretreatment resistance to dolutegravir (DTG)?",
+    "reference": "Ten countries assessed pretreatment resistance to integrase strand-transfer inhibitors; only South Sudan detected resistance to DTG, at an extremely low 0.2% (95% CI 0.0–1.2%), which suggests high predicted efficacy of DTG-based regimens provided adherence is maintained.",
+    "reference_contexts": [
+      "Ten countries assessed pretreatment HIV drug resistance to integrase strand-transfer inhibitors. Among these countries, only South Sudan detected an extremely low prevalence of resistance to DTG (0.2%, 95% CI 0.0–1.2%). This observation is reassuring and suggests high levels of predicted efficacy of DTG-based regimens in achieving population-level viral load suppression, provided sufficient adherence is maintained."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q013"
+    }
+  },
+  {
+    "user_input": "What is the purpose of the Africa Malaria Forum?",
+    "reference": "It is organized annually as a platform for mutual technical and financial accountability, by Member States and partners, on commitments and investments towards a malaria-free future.",
+    "reference_contexts": [
+      "Organize annually, the Africa Malaria Forum, which is a platform for mutual technical and financial accountability, by Member States and partners, on commitments and investments towards a malaria-free future."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q014"
+    }
+  },
+  {
+    "user_input": "What were the results of The Gambia's 2021 national HIV drug resistance survey?",
+    "reference": "The provided documents do not contain this information.",
+    "reference_contexts": [],
+    "_meta": {
+      "answerable": false,
+      "type": "unanswerable",
+      "sources": [],
+      "id": "q015"
+    }
+  },
+  {
+    "user_input": "How does The Gambia's 2021 viral suppression figure compare with the suppression goal cited in the WHO HIV drug resistance report?",
+    "reference": "The Gambia reported only 12% suppressed among people on ART, versus the WHO 90% recommendation it cites; the WHO report calls for sustained viral suppression above 95% by 2025.",
+    "reference_contexts": [
+      "With regards to viral suppressed among PLHIVS on ART, only 12% had their viral load suppressed during the period under review.",
+      "achieve sustained levels of viral suppression >95% by 2025."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-document",
+      "sources": [
+        "gambia",
+        "hivdr2021"
+      ],
+      "id": "q016"
+    }
+  },
+  {
+    "user_input": "How did the malaria case pattern in the 2021 peak season compare with 2020?",
+    "reference": "Cases fell from July to October in 2021 versus the same period in 2020, but rose in November and December 2021 compared with 2020.",
+    "reference_contexts": [
+      "The chart shows decrease in malaria cases from July to October in 2021 compared to the same period in the previous year.",
+      "observed from November to December as more cases were seen in that period in 2021 than in 2020."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q017"
+    }
+  },
+  {
+    "user_input": "What was the historical classification of transmitted HIVDR prevalence before the 10% threshold was agreed?",
+    "reference": "Low (<5%), moderate (5–15%) and high (>15%), based solely on expert opinion.",
+    "reference_contexts": [
+      "Historically, the prevalence of transmitted HIVDR has been defined as low (<5%), moderate (5–15%) and high (>15%) (81). This classification was based solely on expert opinion"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "pdr2017"
+      ],
+      "id": "q018"
+    }
+  },
+  {
+    "user_input": "Which chemoprevention strategies does the WHO AFRO framework list, and which are reflected in The Gambia's 2021 report?",
+    "reference": "The framework lists IPTp, IPTi and SMC. The Gambia's report reflects SMC and IPTp-SP (sulfadoxine-pyrimethamine for pregnant women); it does not mention IPTi in the sections reviewed.",
+    "reference_contexts": [
+      "Chemoprevention: Expand preventive treatment in the most vulnerable groups. This would include intermittent preventive treatment in pregnancy (IPTp), intermittent preventive treatment in infants (IPTi) and seasonal malaria chemoprevention (SMC).",
+      "the seasonal malaria chemoprevention (SMC)",
+      "The use of doses of sulfadoxine-pyrimethamine (SP) for intermittent preventive treatment of malaria (IPTp-SP) is recommended for preventing malaria in pregnancy."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-document",
+      "sources": [
+        "gambia",
+        "malaria"
+      ],
+      "id": "q019"
+    }
+  },
+  {
+    "user_input": "Why is climate change relevant to malaria in Africa?",
+    "reference": "Malaria is climate-sensitive: its distribution and seasonality are closely linked to temperature, rainfall, humidity and socioeconomic development, and climate change is expected to cause an overall net increase in disease risk.",
+    "reference_contexts": [
+      "Malaria is a climate-sensitive disease, whose global and regional distribution and seasonality are closely linked to temperature, rainfall, humidity and socioeconomic development.",
+      "Climate change is expected to cause an overall net increase in the risk of the disease."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q020"
+    }
+  },
+  {
+    "user_input": "How did malaria inpatient deaths in The Gambia change between 2020 and 2021?",
+    "reference": "They dropped significantly, from 73 deaths in 2020 to 42 in 2021.",
+    "reference_contexts": [
+      "The data shows a significant drop in 2021 compared to 2020. Seventy-three deaths were registered in 2020 compared to forty-two in 2021."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q021"
+    }
+  },
+  {
+    "user_input": "Which vaccine had national coverage below 80% in The Gambia in 2021?",
+    "reference": "The first dose of the Measles-Rubella vaccine (79.5%); all other antigens were above 80%.",
+    "reference_contexts": [
+      "The figure below (Figure 75) shows that all of the antigens have national coverage above 80% in 2021 except for the first dose of Measles-Rubella vaccine which was 79.5%."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q022"
+    }
+  },
+  {
+    "user_input": "How many drug-resistance surveys were implemented between 2014 and 2020, and how did 2017–2020 compare with 2014–2016?",
+    "reference": "56 countries implemented 136 surveys since 2014; 113 surveys in 47 countries between 2017 and 2020 versus 37 surveys in 23 countries between 2014 and 2016.",
+    "reference_contexts": [
+      "Substantial progress in survey implementation has been achieved since 2014, with 56 countries implementing 136 surveys. Between 2017 and 2020, 113 surveys were implemented in 47 countries versus 37 surveys in 23 countries between 2014 and 2016"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q023"
+    }
+  },
+  {
+    "user_input": "Which genotyping platform does The Gambia use for HIV drug resistance testing?",
+    "reference": "The provided documents do not contain this information.",
+    "reference_contexts": [],
+    "_meta": {
+      "answerable": false,
+      "type": "unanswerable",
+      "sources": [],
+      "id": "q024"
+    }
+  },
+  {
+    "user_input": "Which HIV types were found among the 678 HIV-positive pregnant women tested in The Gambia?",
+    "reference": "HIV-1 accounted for 622 (92%), HIV-2 for 45 (7%) and HIV-1&2 for 11 (1%).",
+    "reference_contexts": [
+      "of the 678 clients who tested HIV positive, HIV1 accounts for 622 (92%), HIV-2 45 (7%) and HIV-1&2 11 (1%)."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q025"
+    }
+  },
+  {
+    "user_input": "What is the national malaria prevalence in Tanzania according to the framework?",
+    "reference": "The provided documents do not contain this information.",
+    "reference_contexts": [],
+    "_meta": {
+      "answerable": false,
+      "type": "unanswerable",
+      "sources": [],
+      "id": "q026"
+    }
+  },
+  {
+    "user_input": "How many outpatient visits were registered in The Gambia in 2021 and how did this change from 2020?",
+    "reference": "1,647,777 outpatient visits were registered, a 0.72% increase from 2020.",
+    "reference_contexts": [
+      "In 2021, one million six hundred and forty-seven thousand, seven hundred and seventy-seven (1,647,777) outpatient visits were registered in The Gambia.",
+      "The outpatient attendance increased by 0.72% from 2020 to 2021."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q027"
+    }
+  },
+  {
+    "user_input": "What proportion of confirmed malaria cases received Coartem in The Gambia in 2021?",
+    "reference": "85.6% of confirmed under-five cases and 99.1% of confirmed cases aged five and above received Coartem.",
+    "reference_contexts": [
+      "The figure shows that 85.6% of under-five who were confirmed malaria positive have received coartem whilst 99.1% of the above five years who were confirmed malaria positive have received coartem."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q028"
+    }
+  },
+  {
+    "user_input": "What proportion of pregnant women received three or more IPTp doses in Africa in 2014?",
+    "reference": "Only 17%.",
+    "reference_contexts": [
+      "Moreover, only 17% of pregnant women received three or more doses of intermittent preventive treatment in pregnancy (IPTp) in 2014."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q029"
+    }
+  },
+  {
+    "user_input": "What is the efficacy of the R21/Matrix-M malaria vaccine in African children?",
+    "reference": "The provided documents do not contain this information.",
+    "reference_contexts": [],
+    "_meta": {
+      "answerable": false,
+      "type": "unanswerable",
+      "sources": [],
+      "id": "q030"
+    }
+  },
+  {
+    "user_input": "How does the framework define Phase 2 (pre-elimination) programmes?",
+    "reference": "Phase 2 pre-elimination programmes are characterized by a parasite prevalence of less than 5% in all ages, or an Annual Parasite Index (API) of 2–4 per 1000 population, with focalized and seasonal transmission patterns.",
+    "reference_contexts": [
+      "Phase 2, pre-elimination programmes characterized by parasite prevalence of less than 5% in all ages, or API of 2–4 per 1000 population with focalized and seasonal transmission patterns;"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q031"
+    }
+  },
+  {
+    "user_input": "How much does one dose of the RTS,S malaria vaccine cost?",
+    "reference": "The provided documents do not contain this information.",
+    "reference_contexts": [],
+    "_meta": {
+      "answerable": false,
+      "type": "unanswerable",
+      "sources": [],
+      "id": "q032"
+    }
+  },
+  {
+    "user_input": "What were the leading causes of STI-related outpatient visits and admissions in The Gambia in 2021?",
+    "reference": "Vaginal discharge was the main cause of STI-related outpatient visits (38.0%) and urethral discharge the leading cause of admission (36.7).",
+    "reference_contexts": [
+      "Vaginal discharge is the main cause of outpatient visit relating to sexual transmitted infections (38.0%) whilst urethral discharge is the leading cause of admission (36.7)."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q033"
+    }
+  },
+  {
+    "user_input": "What should countries do if national NNRTI pretreatment resistance is ≥10% but a non-NNRTI regimen cannot be rolled out at population level?",
+    "reference": "They may consider using HIVDR testing to guide first-line ART regimen selection, together with continued viral load monitoring.",
+    "reference_contexts": [
+      "Where the national prevalence of pretreatment HIVDR to NNRTIs is ≥10% and the use of a non-NNRTI-containing regimen in first-line ART cannot be implemented at the population level, countries may consider using HIVDR testing to guide first-line ART regimen selection and continued viral load monitoring"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "pdr2017"
+      ],
+      "id": "q034"
+    }
+  },
+  {
+    "user_input": "How does pretreatment resistance to NVP or EFV differ between ART initiators with and without previous ARV exposure?",
+    "reference": "It is about three times higher among initiators reporting previous ARV drug exposure (24%, 95% CI 18–29%) than among ARV drug-naive initiators (7%, 95% CI 4–10%).",
+    "reference_contexts": [
+      "The pooled summary results estimate a prevalence of pretreatment drug resistance to NVP or EFV three times higher among ART initiators reporting previous ARV drug exposure (24%, 95% confidence interval (CI) 18–29%) than among ARV drug-naive ART initiators (7%, 95% CI 4–10%)."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q035"
+    }
+  },
+  {
+    "user_input": "How much did inpatient admissions rise in The Gambia from 2020 to 2021?",
+    "reference": "By 25% (and 32% from 2017 to 2021).",
+    "reference_contexts": [
+      "the health system has gained 25% and 32% increase in inpatient admission from 2020 to 2021 and 2017 to 2021 respectively."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q036"
+    }
+  },
+  {
+    "user_input": "How many people were on ART in The Gambia in December 2021 and how many were children?",
+    "reference": "8,107 patients were on ART, of whom 550 were under 15 (pediatric) and 7,557 were 15 or older (adults); adults were 93% and children 7%.",
+    "reference_contexts": [
+      "As of December 2021, a total of 8,107 patients were on ART, of which 550 are Less than 15 years classified as pediatric whilst 7,557 were fifteen years and above classified as adult."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q037"
+    }
+  },
+  {
+    "user_input": "What does the report say about pretreatment resistance to TDF and to FTC/3TC, and why does it matter for PrEP?",
+    "reference": "Pooled pretreatment resistance was low: 1.6% to TDF and 1.7% to FTC or 3TC, which reassures use of the combination for PrEP; routine surveillance remains strongly recommended as PrEP scales up.",
+    "reference_contexts": [
+      "the low prevalence of pretreatment drug resistance to tenofovir disoproxil fumarate (TDF) (pooled summary results: 1.6%, (95% CI 1.1–2.1%) and emtricitabine (FTC) or lamivudine (3TC) (1.7%, 95% CI 1.2–2.2%) provides reassurance for using this drug combination in PrEP"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q038"
+    }
+  },
+  {
+    "user_input": "What viral load testing and suppression levels did The Gambia report among people on ART in 2021?",
+    "reference": "Only 22% (1,818) of the 8,107 on ART had a viral load test, and only 12% had suppressed viral load, far below the WHO recommendation of 90%.",
+    "reference_contexts": [
+      "Out of the total 8,107 on ART, only 22% (1818) had their viral load test done. With regards to viral suppressed among PLHIVS on ART, only 12% had their viral load suppressed during the period under review. This is far below the WHO recommendation of 90% viral suppressed for total clients on treatment."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q039"
+    }
+  },
+  {
+    "user_input": "Which groups require careful consideration before choosing a non-NNRTI-based regimen?",
+    "reference": "Children, pregnant women and individuals receiving rifampicin for TB, because of limited options, age-appropriate formulations, safety and potential drug interactions.",
+    "reference_contexts": [
+      "For children, pregnant women and individuals receiving rifampicin for treating TB, the choice of a non-NNRTI-based regimen should be carefully considered based on the limited options available, existing age-appropriate formulations, safety and potential drug interactions as well as overall principles for optimizing drugs in ART programmes."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "pdr2017"
+      ],
+      "id": "q040"
+    }
+  },
+  {
+    "user_input": "What was the number of malaria inpatient deaths in The Gambia in 2022?",
+    "reference": "The provided documents do not contain this information.",
+    "reference_contexts": [],
+    "_meta": {
+      "answerable": false,
+      "type": "unanswerable",
+      "sources": [],
+      "id": "q041"
+    }
+  },
+  {
+    "user_input": "What portion of total malaria funding in Africa came from national governments during 2005–2013?",
+    "reference": "It stagnated at less than 10%, reflecting over-reliance on external financing.",
+    "reference_contexts": [
+      "During the period 2005–2013, the proportion of total malaria funding contributed by national governments in Africa stagnated at less than 10%."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q042"
+    }
+  },
+  {
+    "user_input": "How does the framework characterize Phase 4 programmes?",
+    "reference": "Phase 4 programmes prevent re-establishment of local transmission: three consecutive years of zero malaria cases, including countries certified malaria free by WHO, classified malaria free in the 2015 baseline classification, or naturally malaria free.",
+    "reference_contexts": [
+      "Phase 4, programmes preventing re-establishment of local malaria transmission characterized by three consecutive years of zero malaria cases and including countries that have already been certified as malaria free by WHO or classified as malaria free in the 2015 baseline classification or those that have been naturally malaria free."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q043"
+    }
+  },
+  {
+    "user_input": "What impact did the 2014–2015 Ebola epidemic have on malaria control in West Africa?",
+    "reference": "Malaria control gains were lost in the severely affected countries of Liberia, Sierra Leone and Guinea, illustrating how health emergencies overwhelm weak health systems and disrupt service delivery.",
+    "reference_contexts": [
+      "This reality was brought to the fore with the Ebola virus disease (EVD) epidemic in West Africa in 2014 and 2015. During this period, malaria control gains were lost in the severely affected countries of Liberia, Sierra Leone and Guinea."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q044"
+    }
+  },
+  {
+    "user_input": "What are the four objectives of the Framework for implementing the Global Technical Strategy for malaria in the African Region?",
+    "reference": "(a) Reduce malaria mortality rates by at least 90% by 2030 compared with 2015; (b) reduce malaria case incidence by at least 90% by 2030 compared with 2015; (c) eliminate malaria from at least 20 malaria-endemic countries; and (d) prevent re-establishment of malaria in all malaria-free Member States.",
+    "reference_contexts": [
+      "Its objectives are: (a) to reduce malaria mortality rates by at least 90% by 2030 compared with 2015; (b) to reduce malaria case incidence by at least 90% by 2030 compared with 2015; (c) to eliminate malaria from at least 20 malaria endemic countries; and (d) to prevent re-establishment of malaria in all Member States that are malaria-free."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q045"
+    }
+  },
+  {
+    "user_input": "What do the guidelines advise for people at high risk of NNRTI resistance due to prior NNRTI exposure?",
+    "reference": "A non-NNRTI-containing regimen may be preferable regardless of the country's prevalence of NNRTI pretreatment HIVDR and without needing an HIVDR test to document resistance.",
+    "reference_contexts": [
+      "Among people at high risk of pretreatment HIVDR to NNRTIs because of prior exposure to NNRTIs or from other risks, a non-NNRTI-containing regimen may be preferable, regardless of the country's prevalence of NNRTI pretreatment HIVDR and without the need to document the presence of NNRTI resistance by using an HIVDR test."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "pdr2017"
+      ],
+      "id": "q046"
+    }
+  },
+  {
+    "user_input": "How did viral load suppression compare by regimen in children and adolescents on first-line ART for ≥36 months in Zambia?",
+    "reference": "Suppression was 92% with DTG-based regimens, 76% with PI-based ART and 61% with NNRTI-based ART; the odds ratio for DTG-based versus non-DTG-based ART was 6.9.",
+    "reference_contexts": [
+      "the prevalence of viral load suppression was significantly higher among those receiving a DTG-based regimen (92%, 95% CI 83–97%) than among those receiving PI-based ART (76%, 95% CI 63–86%) or NNRTI-based ART (61%, 95% CI 49–72%); odds ratio: 6.9, 95% CI 2.5–19.3, P = 0.001 for DTG-based versus non-DTG-based ART."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q047"
+    }
+  },
+  {
+    "user_input": "What does the 2017 guideline recommend about HIV self-testing?",
+    "reference": "The provided documents do not contain this information.",
+    "reference_contexts": [],
+    "_meta": {
+      "answerable": false,
+      "type": "unanswerable",
+      "sources": [],
+      "id": "q048"
+    }
+  },
+  {
+    "user_input": "How do the guidelines define pretreatment HIV drug resistance (HIVDR)?",
+    "reference": "It is detected among ARV drug-naive people initiating ART or people with prior ARV exposure initiating or reinitiating first-line ART, and can result from transmitted or acquired resistance, or both.",
+    "reference_contexts": [
+      "It can result from either transmitted or acquired HIV drug resistance, or both."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "pdr2017"
+      ],
+      "id": "q049"
+    }
+  },
+  {
+    "user_input": "How many of the 15 countries with the highest estimated global malaria case and death burdens in 2015 are in Africa?",
+    "reference": "Thirteen of the 15 countries accounting for 80% of estimated global malaria cases, and 14 of the 15 countries responsible for 78% of estimated global malaria deaths, are in Africa.",
+    "reference_contexts": [
+      "Thirteen of the 15 countries accounting for 80% of the estimated global cases of malaria in 2015 are in Africa.",
+      "14 of the 15 countries responsible for 78% of the estimated global malaria deaths are in Africa"
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q050"
+    }
+  },
+  {
+    "user_input": "How many countries implemented HIV drug resistance surveys between 2004 and 2021, and how many plan to do so in 2022–2024?",
+    "reference": "66 countries implemented HIV drug resistance surveys using WHO-recommended methods between 2004 and 2021, and 34 countries plan to conduct surveys during 2022–2024.",
+    "reference_contexts": [
+      "Between 2004 and 2021, 66 countries implemented surveys of HIV drug resistance using WHO-recommended methods (Map 1). As of late 2021, 34 countries plan to conduct HIV drug resistance surveys during 2022–2024."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q051"
+    }
+  },
+  {
+    "user_input": "In how many surveys did pretreatment NVP/EFV resistance exceed 10%, and which regimens were most often initiated?",
+    "reference": "In 21 of 30 surveys it exceeded 10%; NVP- or EFV-based regimens were the most frequent first-line regimens in 16 of 20 countries reporting findings (2014–2020).",
+    "reference_contexts": [
+      "Nevirapine (NVP) or efavirenz (EFV)-based regimens were the most frequent ART regimens initiated in 16 of 20 countries reporting survey findings to WHO (2014–2020). In 21 of 30 surveys reported, pretreatment drug resistance to NVP or EFV in populations initiating first-line ART exceeded 10%."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q052"
+    }
+  },
+  {
+    "user_input": "What is the price of a single HIV drug resistance genotyping test?",
+    "reference": "The provided documents do not contain this information.",
+    "reference_contexts": [],
+    "_meta": {
+      "answerable": false,
+      "type": "unanswerable",
+      "sources": [],
+      "id": "q053"
+    }
+  },
+  {
+    "user_input": "What was the efficacy of the RTS,S/AS01 malaria vaccine in the phase 3 trial, by age group?",
+    "reference": "Among children who received four doses, efficacy in 5–17 month-old children was 39% against all forms of malaria and 31.5% against severe malaria. In 6–12 week-old children it was 27% against all forms of malaria, with no significant efficacy against severe malaria.",
+    "reference_contexts": [
+      "Among children who received four doses, vaccine efficacy in 5–17 month-old children for all forms of malaria and severe malaria was 39% and 31.5% respectively. In 6–12 week-old children it was 27% for all forms of malaria, but with no significant efficacy against severe malaria."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q054"
+    }
+  },
+  {
+    "user_input": "How much per capita investment is needed for malaria elimination in Africa by 2030, and how does the 2013 level compare?",
+    "reference": "Total elimination cost by 2030 is estimated at US$ 66 billion, requiring yearly per capita investment to rise from US$ 3 in 2016 to US$ 7 by 2030 (average US$ 5). The 2013 investment was only US$ 2 per person at risk, less than half the average needed.",
+    "reference_contexts": [
+      "Although malaria funding in Africa increased substantially by 410% between 2005 and 2013, the annual investment per person at risk remained low at US$ 2 in the year 2013.",
+      "the total cost of malaria elimination in Africa by 2030 is US$ 66 billion; the required yearly per capita investment is therefore estimated to rise from US$ 3 in 2016 to US$ 7 by 2030 (an average of US$ 5 per capita per year between 2016 and 2030)."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q055"
+    }
+  },
+  {
+    "user_input": "How many TB cases were notified in The Gambia in 2021 and what share were tested for HIV?",
+    "reference": "2,279 TB cases were notified; nationally 87.9% of TB patients were tested for HIV, with a positivity rate of 13.0%, 95.8% put on CPT and 88.8% on ART.",
+    "reference_contexts": [
+      "A total of 2,279 TB case notification was registered nationally.",
+      "Nationally, 87.9% of TB patients were tested with a positivity rate of 13.0% and 95.8% were put on CPT while 88.8% were put on ART treatment."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "multi-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q056"
+    }
+  },
+  {
+    "user_input": "What share of the general population and of children under five had ITN access or use by 2015 in the Region?",
+    "reference": "About 67% of the general population had access to an ITN in 2015, and the proportion of under-fives sleeping under an ITN rose from 2% in 2000 to 68% in 2015.",
+    "reference_contexts": [
+      "In 2015, about 67% of the general population in the Region had access to an insecticidetreated net (ITN). The proportion of children under the age of five years sleeping under an ITN increased from 2% in 2000 to 68% in 2015."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "malaria"
+      ],
+      "id": "q057"
+    }
+  },
+  {
+    "user_input": "What share of newly diagnosed infants in sub-Saharan Africa carry drug-resistant HIV before treatment?",
+    "reference": "Nearly half: surveys in 10 sub-Saharan African countries found a pooled prevalence of pretreatment resistance to EFV or NVP of 45% (95% CI 42–49%), highlighting the need to accelerate the transition to DTG-based treatment for children.",
+    "reference_contexts": [
+      "nearly half of infants newly diagnosed with HIV carry drug-resistant HIV before initiating treatment. The prevalence of pretreatment HIV drug resistance to EFV or NVP was high, with a pooled summary result of 45% (95% CI 42–49%)."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "hivdr2021"
+      ],
+      "id": "q058"
+    }
+  },
+  {
+    "user_input": "What maternal and fetal benefits does IPTp-SP provide according to the report?",
+    "reference": "IPTp reduces maternal malaria episodes, maternal and fetal anemia, and low birthweight.",
+    "reference_contexts": [
+      "IPTp reduces the adverse consequences of malaria on maternal and fetal outcomes, including the reduction of maternal malaria episodes, maternal and fetal anemia, and low birthweight."
+    ],
+    "_meta": {
+      "answerable": true,
+      "type": "single-context",
+      "sources": [
+        "gambia"
+      ],
+      "id": "q059"
+    }
+  }
+]

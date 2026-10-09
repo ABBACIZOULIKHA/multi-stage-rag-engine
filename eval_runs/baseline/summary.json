@@ -1,0 +1,59 @@
+{
+  "run_dir": "eval_runs\\baseline",
+  "finished_at": "2026-10-09T21:51:04.558868+00:00",
+  "config": {
+    "generator_model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "generator_model_used": {
+      "nvidia/nemotron-3-super-120b-a12b:free": 50
+    },
+    "generator_fallbacks": [],
+    "judge_model": "Ollama:gpt-oss:120b-cloud",
+    "embed_model": "BAAI/bge-m3",
+    "rerank_model": "BAAI/bge-reranker-v2-m3",
+    "top_k": 20,
+    "rerank_top_n": 3,
+    "hybrid_alpha": 0.5,
+    "enable_hybrid": true,
+    "chunk_size": 512,
+    "chunk_overlap": 50,
+    "chunker": "markdown",
+    "metrics": [
+      "faithfulness",
+      "answer_relevancy",
+      "context_precision",
+      "context_recall"
+    ]
+  },
+  "metric_failures": {},
+  "counts": {
+    "total": 59,
+    "answerable": 51,
+    "unanswerable": 8,
+    "generation_failed": 0,
+    "scored_by_ragas": 43,
+    "abstention_judged": 50
+  },
+  "averages": {
+    "answerable_only": {
+      "faithfulness": 0.905,
+      "answer_relevancy": 0.7657,
+      "context_precision": 0.8527,
+      "context_recall": 0.8837,
+      "scored_items": 51
+    },
+    "all_scored": {
+      "faithfulness": 0.905,
+      "answer_relevancy": 0.7657,
+      "context_precision": 0.8527,
+      "context_recall": 0.8837,
+      "scored_items": 59
+    },
+    "abstention": {
+      "abstention_rate_unanswerable": 1.0,
+      "answer_rate_answerable": 0.8837,
+      "unanswerable_judged": 7,
+      "answerable_judged": 43,
+      "errors": 0
+    }
+  }
+}

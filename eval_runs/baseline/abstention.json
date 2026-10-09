@@ -1,0 +1,252 @@
+{
+  "q001": {
+    "id": "q001",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q002": {
+    "id": "q002",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q003": {
+    "id": "q003",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q004": {
+    "id": "q004",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q005": {
+    "id": "q005",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q006": {
+    "id": "q006",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q007": {
+    "id": "q007",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q008": {
+    "id": "q008",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q009": {
+    "id": "q009",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q010": {
+    "id": "q010",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q011": {
+    "id": "q011",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q012": {
+    "id": "q012",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q013": {
+    "id": "q013",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q014": {
+    "id": "q014",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q015": {
+    "id": "q015",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q016": {
+    "id": "q016",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q017": {
+    "id": "q017",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q018": {
+    "id": "q018",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q019": {
+    "id": "q019",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q020": {
+    "id": "q020",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q021": {
+    "id": "q021",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q022": {
+    "id": "q022",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q023": {
+    "id": "q023",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q024": {
+    "id": "q024",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q025": {
+    "id": "q025",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q026": {
+    "id": "q026",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q027": {
+    "id": "q027",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q028": {
+    "id": "q028",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q029": {
+    "id": "q029",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q030": {
+    "id": "q030",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q031": {
+    "id": "q031",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q032": {
+    "id": "q032",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q033": {
+    "id": "q033",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q034": {
+    "id": "q034",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q035": {
+    "id": "q035",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q036": {
+    "id": "q036",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q037": {
+    "id": "q037",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q038": {
+    "id": "q038",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q039": {
+    "id": "q039",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q040": {
+    "id": "q040",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q041": {
+    "id": "q041",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q042": {
+    "id": "q042",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q043": {
+    "id": "q043",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q044": {
+    "id": "q044",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q045": {
+    "id": "q045",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q046": {
+    "id": "q046",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q047": {
+    "id": "q047",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q048": {
+    "id": "q048",
+    "label": "ABSTAINED",
+    "raw": "ABSTAINED"
+  },
+  "q049": {
+    "id": "q049",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  },
+  "q050": {
+    "id": "q050",
+    "label": "ANSWERED",
+    "raw": "ANSWERED"
+  }
+}

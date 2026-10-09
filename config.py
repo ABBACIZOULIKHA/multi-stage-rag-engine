@@ -7,16 +7,16 @@ from qdrant_client.http import models as rest
 
 load_dotenv()
 
-LLM_MODEL = os.getenv("LLM_MODEL", "qwen/qwen3.8-27b:free")
+LLM_MODEL = os.getenv("LLM_MODEL", "nvidia/nemotron-3-super-120b-a12b:free")
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openrouter").strip().lower()
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GOOGLE_OPENAI_BASE = os.getenv(
+    "GOOGLE_OPENAI_BASE",
+    "https://generativelanguage.googleapis.com/v1beta/openai/",
+)
 LLM_FALLBACK_MODELS = [
     m.strip()
-    for m in os.getenv(
-        "LLM_FALLBACK_MODELS",
-        "nvidia/nemotron-3-super-120b-a12b:free,"
-        "google/gemma-4-31b-it:free,"
-        "dots-studio/dots-3-note-preview:free,"
-        "inclusionai/ling-3.0-flash-sante:free",
-    ).split(",")
+    for m in os.getenv("LLM_FALLBACK_MODELS", "").split(",")
     if m.strip()
 ]
 LLM_MAX_TOKENS = int(os.getenv("LLM_MAX_TOKENS", "2048"))
@@ -63,6 +63,28 @@ HYBRID_ALPHA = float(os.getenv("HYBRID_ALPHA", "0.5"))
 SPARSE_TOP_K = int(os.getenv("SPARSE_TOP_K", TOP_K))
 
 DATA_DIR = os.getenv("DATA_DIR", "data")
+
+EVAL_TESTSET_FILE = os.getenv("EVAL_TESTSET_FILE", "Ragas_testset_with_sources.json")
+EVAL_JUDGE_PROVIDER = os.getenv("EVAL_JUDGE_PROVIDER", "ollama").strip().lower()
+EVAL_JUDGE_MODEL = os.getenv("EVAL_JUDGE_MODEL", "gpt-oss:120b-cloud")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY", "ollama")
+EVAL_JUDGE_TEMPERATURE = float(os.getenv("EVAL_JUDGE_TEMPERATURE", "0"))
+EVAL_JUDGE_MAX_TOKENS = int(os.getenv("EVAL_JUDGE_MAX_TOKENS", "4096"))
+EVAL_CACHE_DIR = os.getenv("EVAL_CACHE_DIR", ".ragas_cache")
+EVAL_OUTPUT_DIR = os.getenv("EVAL_OUTPUT_DIR", "eval_runs")
+EVAL_JUDGE_EMBED_DEVICE = os.getenv("EVAL_JUDGE_EMBED_DEVICE", "").strip()
+EVAL_METRICS = [
+    m.strip()
+    for m in os.getenv(
+        "EVAL_METRICS",
+        "faithfulness,answer_relevancy,context_precision,context_recall",
+    ).split(",")
+    if m.strip()
+]
+EVAL_BATCH_SIZE = int(os.getenv("EVAL_BATCH_SIZE", "8"))
+EVAL_SCORE_ANSWERABLE = os.getenv("EVAL_SCORE_ANSWERABLE", "1") not in ("0", "false", "no")
+EVAL_SCORE_ABSTENTION = os.getenv("EVAL_SCORE_ABSTENTION", "1") not in ("0", "false", "no")
 
 
 DEVICE = os.getenv("DEVICE", "").strip()
@@ -234,13 +256,43 @@ def llm_model_candidates():
     return seen
 
 
-def get_llm(model=None):
+def _require_google_key():
+    if not GEMINI_API_KEY:
+        raise RuntimeError(
+            "GEMINI_API_KEY is not set. Create a key at "
+            "https://aistudio.google.com/apikey and add "
+            "GEMINI_API_KEY=... to your .env "
+            "(required for LLM_PROVIDER=google)."
+        )
+
+
+def _require_openrouter_key():
     if not OPENROUTER_API_KEY:
         raise RuntimeError(
             "OPENROUTER_API_KEY is not set. Create a key at "
             "https://openrouter.ai/keys and add "
             "OPENROUTER_API_KEY=... to your .env"
         )
+
+
+def get_llm(model=None):
+    if LLM_PROVIDER == "google":
+        _require_google_key()
+        from llama_index.llms.openai_like import OpenAILike
+
+        return OpenAILike(
+            model=model or LLM_MODEL,
+            api_key=GEMINI_API_KEY,
+            api_base=GOOGLE_OPENAI_BASE,
+            temperature=LLM_TEMPERATURE,
+            max_tokens=LLM_MAX_TOKENS,
+            context_window=LLM_CONTEXT_WINDOW,
+            timeout=120,
+            max_retries=5,
+            is_chat_model=True,
+        )
+
+    _require_openrouter_key()
     from llama_index.llms.openrouter import OpenRouter
 
     return OpenRouter(
@@ -281,4 +333,62 @@ def get_reranker():
         model=RERANK_MODEL,
         top_n=RERANK_TOP_N,
         device=get_device(),
+    )
+
+
+def _judge_endpoint():
+    if EVAL_JUDGE_PROVIDER == "ollama":
+        return OLLAMA_BASE_URL, OLLAMA_API_KEY, "Ollama"
+    if EVAL_JUDGE_PROVIDER == "openrouter":
+        _require_openrouter_key()
+        return OPENROUTER_API_BASE, OPENROUTER_API_KEY, "OpenRouter"
+    raise ValueError(
+        f"Unknown EVAL_JUDGE_PROVIDER '{EVAL_JUDGE_PROVIDER}'. "
+        "Use 'ollama' or 'openrouter'."
+    )
+
+
+def get_judge_client():
+    base_url, api_key, _ = _judge_endpoint()
+    from openai import OpenAI
+
+    return OpenAI(api_key=api_key, base_url=base_url, max_retries=5, timeout=600.0)
+
+
+def get_judge_async_client():
+    base_url, api_key, _ = _judge_endpoint()
+    from openai import AsyncOpenAI
+
+    return AsyncOpenAI(api_key=api_key, base_url=base_url, max_retries=5, timeout=600.0)
+
+
+def describe_judge():
+    _, _, provider = _judge_endpoint()
+    return f"{provider}:{EVAL_JUDGE_MODEL}"
+
+
+def get_eval_judge_llm():
+    from ragas.cache import DiskCacheBackend
+    from ragas.llms import llm_factory
+
+    return llm_factory(
+        model=EVAL_JUDGE_MODEL,
+        provider="openai",
+        client=get_judge_async_client(),
+        cache=DiskCacheBackend(cache_dir=EVAL_CACHE_DIR),
+        temperature=EVAL_JUDGE_TEMPERATURE,
+        max_tokens=EVAL_JUDGE_MAX_TOKENS,
+    )
+
+
+def get_eval_embeddings():
+    from ragas.cache import DiskCacheBackend
+    from ragas.embeddings import HuggingFaceEmbeddings
+
+    return HuggingFaceEmbeddings(
+        model=EMBED_MODEL,
+        device=EVAL_JUDGE_EMBED_DEVICE or get_device(),
+        normalize_embeddings=True,
+        batch_size=8,
+        cache=DiskCacheBackend(cache_dir=EVAL_CACHE_DIR),
     )

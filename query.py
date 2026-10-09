@@ -8,6 +8,12 @@ from llama_index.core.query_engine import RetrieverQueryEngine
 FALLBACK_ERRORS = ("RateLimitError", "APIConnectionError", "APITimeoutError", "InternalServerError")
 
 
+def use_utf8_stdout():
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
+
+
 def build_index(llm, filters=None):
     Settings.embed_model = config.get_embed_model()
     vector_store = config.get_vector_store(filters=filters)
@@ -20,16 +26,35 @@ def build_index(llm, filters=None):
     )
 
 
+_ENGINE_CACHE = {}
+
+
+def get_engine(model, filters=None):
+    key = (model, repr(filters) if filters is not None else None)
+    engine = _ENGINE_CACHE.get(key)
+    if engine is None:
+        llm = config.get_llm(model)
+        Settings.llm = llm
+        engine = build_index(llm, filters=filters)
+        _ENGINE_CACHE[key] = engine
+    return engine
+
+
 def query_with_failover(question: str, filters=None):
+    """Ask the LLM, falling back down ``config.llm_model_candidates()``.
+
+    The model that actually answered is stamped onto the returned response as
+    ``response.model_used`` — the summary must report what produced an answer,
+    not what the config hoped would.
+    """
     models = config.llm_model_candidates()
     last_error = None
 
     for i, model in enumerate(models):
-        llm = config.get_llm(model)
-        Settings.llm = llm
-        engine = build_index(llm, filters=filters)
         try:
-            return engine.query(question)
+            response = get_engine(model, filters=filters).query(question)
+            response.model_used = model
+            return response
         except Exception as exc:
             if not any(kind in type(exc).__name__ for kind in FALLBACK_ERRORS):
                 raise
@@ -72,6 +97,7 @@ def answer(question: str, filters=None):
 
 
 def main():
+    use_utf8_stdout()
     argp = argparse.ArgumentParser(description="Query the RAG index")
     argp.add_argument("question", nargs="*", help="Question to ask")
     argp.add_argument(

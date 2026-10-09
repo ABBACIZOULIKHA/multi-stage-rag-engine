@@ -1,0 +1,28 @@
+[
+  {
+    "id": "q001",
+    "faithfulness": 0.4286,
+    "answer_relevancy": 0.8561,
+    "context_precision": 0.0,
+    "context_recall": 0.5,
+    "reasons": {
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null
+    }
+  },
+  {
+    "id": "q002",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.7343,
+    "context_precision": 1.0,
+    "context_recall": 1.0,
+    "reasons": {
+      "faithfulness": null,
+      "answer_relevancy": null,
+      "context_precision": null,
+      "context_recall": null
+    }
+  }
+]

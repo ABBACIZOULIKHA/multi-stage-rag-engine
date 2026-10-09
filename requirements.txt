@@ -9,3 +9,18 @@ fastembed>=0.8.0
 sentence-transformers>=3.3.0
 transformers>=4.46.0
 python-dotenv>=1.0.1
+
+# --- Evaluation (evaluate.py) -------------------------------------------------
+# DO NOT UPGRADE THE langchain* PINS BELOW.
+# ragas 0.4.3 still does `from langchain_community.chat_models import ...` at import
+# time; that module was moved out of langchain-community in 1.x, so the whole stack
+# must stay on the 0.3 line or `import ragas` fails with ModuleNotFoundError.
+# Pinning every package individually stops pip from pulling a 1.x langchain-core
+# through ragas' transitive requirements.
+ragas==0.4.3
+langchain==0.3.30
+langchain-core==0.3.86
+langchain-community==0.3.31
+langchain-openai==0.3.35
+langchain-huggingface==0.3.1
+langchain-text-splitters==0.3.11
